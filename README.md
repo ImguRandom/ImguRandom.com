@@ -1,3 +1,3 @@
 # [ImguRandom.com](https://imgurandom.com)
-![android-chrome-512x512](https://github.com/TKW905/ImguRandom/assets/5123258/d6ab2354-6b87-43e5-865d-0daeb2b73c61)
+![imgurandom](https://github.com/ImguRandom/ImguRandom.com/assets/146590350/9e3955c8-0bef-4e00-afe8-74557b4e27e1)
 A modified version of the random Imgur image loader from [newroman.net/imgur](https://newroman.net/imgur)
