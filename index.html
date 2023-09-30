@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>ImguRandom</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+      <meta name="author" content="TKW905">
+      <meta name="description" content="A fun way to browse Imgur images at random.">
+      <meta name="theme-color" content="#5E9C73">
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+      <link rel="manifest" href="site.webmanifest">
+
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="style.css">
+
+      <!-- Scripts -->
+      <!-- <script type="text/javascript" src="localStorage.js" defer></script> -->
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="collapse.js" defer></script>      
+      <script type="text/javascript" src="imgurandom.js" defer></script> 
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li>ImguRandom</li>
+            </ul>
+         </nav>
+      </header>
+      <center>
+         <div id="sitenotice">
+            <p>WARNING: You will encounter a lot of NSFW/NSFL content through this site.<br>
+            The images you see on this site are <i>NOT</i> hosted on this site. All images are from Imgur.<br>
+            If you encounter any offensive/illegal material, please submit a <a href="https://imgur.com/removalrequest" target="_blank">Removal Request</a> to Imgur.</p> 
+         </div>
+         <button type="button" class="collapsible"><b>Options</b></button>
+         <div class="content">
+              <input type="checkbox" id="1" class="box" name="Display filtered images in a separate section?">
+              <label for="1">Display filtered images in a separate section?</label><br>
+              <input type="checkbox" id="2" class="box" name="Filter out images with a width/height of 32px or less">
+              <label for="2">Filter out images with a width/height of 32px or less</label><br>
+              <input type="checkbox" id="3" class="box" name="Filter out Monopoly Man images">
+              <label for="3">Filter out Monopoly Man images</label><br>
+              <input type="checkbox" id="4" class="box" name="Filter out repetitive cellphone images">
+              <label for="4">Filter out repetitive cellphone images</label><br>
+              <input type="checkbox" id="5" class="box" name="Filter out Facebook logo images">
+              <label for="5">Filter out Facebook logo images</label><br>
+              <input type="checkbox" id="6" class="box" name="Filter out YouTube logo images">
+              <label for="6">Filter out YouTube logo images</label><br>
+              <input type="checkbox" id="7" class="box" name="Filter out monster game images">
+              <label for="7">Filter out monster game images</label><br>
+              <input type="checkbox" id="8" class="box" name="Filter out Yugioh gameplay images">
+              <label for="8">Filter out Yugioh gameplay images</label><br>
+              <input type="checkbox" id="9" class="box" name="Filter out images with a height under 100px">
+              <label for="9">Filter out images with a height under 100px</label><br>
+              <div class="slidecontainer">
+                  <label for="numImages"># of images to load (min 1, max 30):</label> <output id="numImagesOut">30</output><br>
+                  <input type="range" min="1" max="30" value="30" class="slider" id="numImages" onchange="numImagesOut.value=value">
+              </div>
+          </div>
+          <p><button id="random">Load Images</button></p>
+          <p id="info"></p>
+          <hr>
+         <div id="images"></div>
+         <div class="hideonload-filtered"><hr>
+         <h1>Filtered Images</h1>
+         <div id="filteredimages"></div>
+         </div>
+         <p class="hideonload"><button id="random2">Load Images</button></p>
+      </center>
+   </body>
+</html>

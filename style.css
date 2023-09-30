@@ -1,0 +1,207 @@
+:root {
+    --color-body: hsl(241, 51%, 16%);
+    --color-white-90: hsl(0, 0%, 90%);
+    --color-gradient-left: hsl(204, 49%, 33%);
+    --color-gradient-right: hsl(140, 37%, 39%);
+    --color-dark: hsl(230, 5%, 22%);
+    --color-blue: hsl(236, 96%, 64%);
+    --color-lightblue: hsl(225, 100%, 65%);
+    --color-red: hsl(0, 99%, 62%);
+
+    --font-small-pc: 0.8rem;
+    --font-small-mobile: 0.6rem;
+
+    --box-shadow-image: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    --text-shadow: 1px 1px 3px hsl(0, 0%, 16%);
+
+    --bg-gradient-bluegreen: linear-gradient(90deg, var(--color-gradient-left) 0%, var(--color-gradient-right) 100%);
+    --box-width: 500px;
+}
+
+body {
+    background-color: var(--color-body);
+    color: var(--color-white-90);
+    overflow-y: visible;
+    font-family: Calibri, Arial;
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+    text-shadow: var(--text-shadow);
+}
+
+/* Hyperlinks */
+a {
+    color: var(--color-red);
+}
+
+a:visited, a:hover {
+    color: var(--color-red);
+}
+
+/* Header text */
+h1 {
+    color: var(--color-white-90);
+}
+
+/* Topnav */
+nav {
+    background: var(--bg-gradient-bluegreen);
+    margin: 0;
+    overflow: hidden;
+    color: var(--color-white-90);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 14px 16px;
+    text-align: center;
+    box-shadow: var(--box-shadow-image);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+ 
+nav > ul > li > a {
+    color: var(--color-lightblue);
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+
+/* Site Notice */
+#sitenotice {
+    background: var(--bg-gradient-bluegreen);
+    padding: 4px 0;
+    width: var(--box-width);
+    margin: 8px 0;
+    font-size: var(--font-small-pc);
+    color: var(--color-white-90);
+}
+
+#numImagesOut {
+    color: var(--color-white-90);
+    font-weight: bolder;
+}
+
+#sitenotice p {
+    padding: 2px 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: var(--color-white-90);
+}
+
+/* Loading Info */
+#info {
+    color: var(--color-white-90);
+    font-weight: bolder;
+}
+
+/* Load images buttons */
+#random,
+#random2 {
+    font-size: var(--font-small-pc);
+    background: var(--bg-gradient-bluegreen);
+    color: var(--color-white-90);
+    font-weight: bolder;
+    padding: 6px;
+    border: 4px outset rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    text-shadow: var(--text-shadow);
+}
+
+.hideonload, 
+.hideonload-filtered {
+    display: none;
+}
+
+/* Image styling */
+#images, 
+#filteredimages {
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+#images a:visited, 
+#filteredimages a:visited {
+    display: inline-block;
+}
+
+#images img, 
+#filteredimages img {
+    margin: 1px 2px;
+    background: var(--bg-gradient-bluegreen);
+    box-shadow: var(--box-shadow-image);
+}
+
+#images img:hover, 
+#filteredimages img:hover {
+    
+}
+
+/* Horizontal rule */
+hr {
+  color: var(--color-gradient-left);
+}
+
+/* Options panel styling */
+.collapsible {
+    background: var(--bg-gradient-bluegreen);
+    color: var(--color-white-90);
+    padding: 4px;
+    width: 340px;
+    text-align: center;
+    outline: none;
+    font-size: var(--font-small-pc);
+    border: 4px outset rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.collapsible b,
+.collapsible sup {
+    text-shadow: var(--text-shadow);
+}
+
+/* Options panel content */
+.content {
+    width: 320px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-small-pc);
+    background: var(--bg-gradient-bluegreen);
+    font-weight: bolder;
+    padding: 8px 6px 0px 6px;
+    border: 4px outset rgba(0, 0, 0, 0.6);
+}
+
+.content div {
+  padding: 8px;
+}
+
+.content .checkboxes {
+  padding: 8px;
+}
+
+.slidecontainer {
+    margin: 0 auto;
+}
+
+/* Mobile theming */
+@media screen and (max-width: 600px) {
+    .content {
+        font-size: var(--font-small-mobile);
+    }
+    #sitenotice {
+        width: 90%;
+        font-size: var(--font-small-mobile);
+    }
+    h1 {
+        font-size: 1rem;
+    }
+}
