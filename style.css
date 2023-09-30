@@ -74,6 +74,23 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
+/* Favorites/Options */
+
+/* Position favorites to the left */
+#favorites {
+  position: absolute;
+  display: block;
+}
+
+/* Position options to the right */
+#options {
+  position: absolute;
+  display: block;
+  right: 2%;
+  top: 1%;
+  font-size: 1.8rem;
+}
+
 /* Site Notice */
 #sitenotice {
     background: var(--bg-gradient-bluegreen);
@@ -144,6 +161,10 @@ nav > ul > li > a {
     
 }
 
+.image {
+  display: inline;
+}
+
 /* Horizontal rule */
 hr {
   color: var(--color-gradient-left);
@@ -192,8 +213,26 @@ hr {
     margin: 0 auto;
 }
 
+/* Buttons */
+button#favorite {
+  border: 2px solid red;
+  position: absolute;
+  display: revert;
+  margin-left: -115px;
+  background: var(--bg-gradient-bluegreen);
+  border: 2px outset rgba(0, 0, 0, 0.6);
+  color: var(--color-white-90);
+  font-size: 1.4rem;
+  padding: 0 3px;
+  border-radius: 8px;
+}
+
 /* Mobile theming */
 @media screen and (max-width: 600px) {
+    #options {
+        right: 4%;
+        top: 1%;
+    }
     .content {
         font-size: var(--font-small-mobile);
     }

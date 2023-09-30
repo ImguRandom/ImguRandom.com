@@ -4,8 +4,8 @@
 
 imgurcache = new Array();
 
-// Local storage stuff
-let boxes = document.getElementsByClassName('box').length;
+// localStorage stuff
+var boxes = document.getElementsByClassName('box').length;
 function save() {
 	for (let i = 1; i <= boxes; i++) {
 		var checkbox = document.getElementById(String(i));
@@ -13,6 +13,8 @@ function save() {
   	}
 	var numImages = document.getElementById("numImages");
 	localStorage.setItem("localNumImages", numImages.value);
+
+	// Save favorites array to localStorage
 }
 
 window.addEventListener('change', save);
@@ -22,8 +24,10 @@ jQuery(document).ready(function($) {
 	var numImagesOut = JSON.parse(localStorage.getItem("localNumImages"));
 	console.log("[LocalStorage] Number of Images Output Value: " + numImagesOut);
 
+	// Get locally stored favorites
+
 	// Set the displayed amount of images in the output.
-	if (localStorage.length == null) {
+	if (localStorage.length === null) {
 		// Default to 30 if there is no locally stored value.
 		document.getElementById("numImagesOut").value = 30;
 		document.getElementById("numImages").value = 30;
@@ -90,8 +94,9 @@ jQuery(document).ready(function($) {
 			for (let i = 0; i < num; i++) {
 				self.hunt(function(id) {
 					self.done++;
-					
-					$(images_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
+
+					// First step of the Favorites panel, we now have a button nearby that uses the generated ID.
+					$(images_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
 
 					self.update();
 				});
@@ -127,7 +132,7 @@ jQuery(document).ready(function($) {
 				// Display in Filtered Images if option is present
 				if (showFiltered == true)
 				{
-					$(filteredimages_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
+					$(filteredimages_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
 				}
 
                                 // Update the info for how many images have been loaded
@@ -222,4 +227,6 @@ jQuery(document).ready(function($) {
 	$("#random2").on('click', function() {
 		Imgur.fetch(numImages.value);
 	});
+
+	// Add func call for Favorites button and a function for it to call to save a favorite.
 });
