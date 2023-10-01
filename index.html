@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-CA">
    <head>
-      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <title>ImguRandom</title>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
-      <meta name="author" content="TKW905">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="UTF-8">
+      <title>ImguRandom</title>
       <meta name="description" content="A fun way to browse Imgur images at random.">
+      <meta name="author" content="ImguRandom">
       <meta name="theme-color" content="#5E9C73">
       <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -35,9 +35,11 @@
       </header>
       <center>
          <div id="sitenotice">
-            <p>WARNING: You will encounter a lot of NSFW/NSFL content through this site.<br>
-            The images you see on this site are <i>NOT</i> hosted on this site. All images are from Imgur.<br>
-            If you encounter any offensive/illegal material, please submit a <a href="https://imgur.com/removalrequest" target="_blank">Removal Request</a> to Imgur.</p> 
+            <p>
+               WARNING: You will encounter a lot of NSFW/NSFL content through this site.<br>
+               The images you see on this site are <i>NOT</i> hosted on this site. All images are from Imgur.<br>
+               If you encounter any offensive/illegal material, please submit a <a href="https://imgur.com/removalrequest" target="_blank">Removal Request</a> to Imgur.
+            </p> 
          </div>
          <button type="button" class="collapsible"><b>Options</b></button>
          <div class="content">
@@ -63,10 +65,10 @@
                   <label for="numImages"># of images to load (min 1, max 30):</label> <output id="numImagesOut">30</output><br>
                   <input type="range" min="1" max="30" value="30" class="slider" id="numImages" onchange="numImagesOut.value=value">
               </div>
-          </div>
-          <p><button id="random">Load Images</button></p>
-          <p id="info"></p>
-          <hr>
+         </div>
+         <p><button id="random">Load Images</button></p>
+         <p id="info"></p>
+         <hr>
          <div id="images"></div>
          <div class="hideonload-filtered"><hr>
          <h1>Filtered Images</h1>
