@@ -1,7 +1,3 @@
-// taken from evilinternet(?), original source long gone
-// then taken from newroman.net/imgur by TKW905
-// and heavily modified by TKW905 as well
-
 imgurcache = new Array();
 
 // localStorage stuff
