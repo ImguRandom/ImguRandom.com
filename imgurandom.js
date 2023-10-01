@@ -96,7 +96,7 @@ jQuery(document).ready(function($) {
 					self.done++;
 
 					// First step of the Favorites panel, we now have a button nearby that uses the generated ID.
-					$(images_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
+					$(images_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=8000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
 
 					self.update();
 				});
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
 				// Display in Filtered Images if option is present
 				if (showFiltered == true)
 				{
-					$(filteredimages_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
+					$(filteredimages_el).append("<div class=\"image\"><a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=8000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a><button id=\"favorite\" value=\"" + id + "\"><i class=\"fa fa-heart\"></i></button></div>");
 				}
 
                                 // Update the info for how many images have been loaded
