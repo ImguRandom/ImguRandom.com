@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
 				self.hunt(function(id) {
 					self.done++;
 					
-					$(images_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
+					$(images_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=10000&fidelity=grand\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
 
 					self.update();
 				});
@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
 				// Display in Filtered Images if option is present
 				if (showFiltered == true)
 				{
-					$(filteredimages_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=4000&fidelity=high\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
+					$(filteredimages_el).append("<a href=\"https://i.imgur.com/" + id + "_d.webp?maxwidth=10000&fidelity=grand\" target=\"_blank\" rel=\"noreferrer\"><img src=\"https://i.imgur.com/" + id + "s.png\" height=\"110\" width=\"110\" /></a>");
 				}
 
                                 // Update the info for how many images have been loaded
